@@ -11,14 +11,15 @@ country_points_average = data_reviews.groupby('country')['points'].mean()
 
 # Create the DataFrame
 datas = pd.DataFrame({
+    'country': counts.index,
     'count': counts,
-    'points': country_points_average.values.round(1)}).reset_index()
+    'points': country_points_average.values.round(1)}).reset_index(drop=True)
 
 # Set index as country
 datas.set_index('country', inplace=True)
 
 # Sort values by count and points descending
-sorting_data = datas.sort_values(by=['count', 'points'], ascending=False)
+sorting_data = datas.sort_values(by=['count'], ascending=False)
 
 sorting_data.to_csv('data/reviews-per-country.csv', sep='|', encoding='utf-8')
 
