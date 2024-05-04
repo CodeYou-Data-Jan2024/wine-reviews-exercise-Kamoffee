@@ -5,7 +5,7 @@ import pytest
 CSV_FILE = "data/reviews-per-country.csv"
 
 def test_file_exists():
-    assert os.path.exists(CSV_FILE) == True, "csv file does not exist"
+    assert os.path.exists(CSV_FILE) == True, "csv file does not exist "
 
 def test_columns_exist():
     expected_columns = ['country','count','points']
