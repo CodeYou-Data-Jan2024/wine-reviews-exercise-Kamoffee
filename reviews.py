@@ -1,5 +1,3 @@
-# add your code here
-
 import pandas as pd
 
 # Read the CSV file
