@@ -2,6 +2,7 @@
 import pandas as pd
 
 # Read the CSV file
+
 data_reviews = pd.read_csv('data/winemag-data-130k-v2.csv.zip')
 
 # Calculate count of reviews and average points for each country
