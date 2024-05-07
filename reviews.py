@@ -20,9 +20,9 @@ datas.set_index('country', inplace=True)
 
 # Sort values by count and points descending
 sorting_data = datas.sort_values(by=['count'], ascending=False)
-# sorting_data.to_csv('data/reviews-per-country.csv', sep='|', encoding='utf-8')
+sorting_data.to_csv('data/reviews-per-country.csv', sep='|', encoding='utf-8')
 
-output_data = pd.concat([sorting_data.head(5), sorting_data.tail(5)])
-output_data.to_csv('data/reviews-per-country.csv', sep='|', encoding='utf-8')
+# output_data = pd.concat([sorting_data.head(5), sorting_data.tail(5)])
+# output_data.to_csv('data/reviews-per-country.csv', sep='|', encoding='utf-8')
 
 
