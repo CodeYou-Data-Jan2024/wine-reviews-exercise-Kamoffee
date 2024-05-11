@@ -25,7 +25,7 @@
 import pandas as pd
 
 # Read the CSV file
-data_reviews = pd.read_csv('data/winemag-data-130k-v2.csv.zip')
+data_reviews = pd.read_csv('data/winemag-data-130k-v2.csv.zip', compression='zip')
 
 # Creating the coulumns we need grouping them by country
 country_points_average = data_reviews.groupby('country').agg({'country': 'count', 'points': 'mean'}).round(1)
