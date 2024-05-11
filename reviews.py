@@ -34,4 +34,4 @@ country_points_average = data_reviews.groupby('country').agg({'country': 'count'
 datas = country_points_average.rename(columns={'country': 'count'}).reset_index()
 
 # Creating the CSV file
-datas.to_csv('data/reviews-per-country.csv', sep='|', encoding='utf-8', index=False)
+datas.to_csv('data/reviews-per-country.csv', index=False)
